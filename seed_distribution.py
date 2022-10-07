@@ -26,7 +26,7 @@ mutation_type_map = {"cmp-int-replace": "Compare\nOperator","const-replace":"Con
                      "branch-swap": "Branch\nSwap", "binop-int-replace":"Binary\nOperator", "cmp-swap": "Cmp\nSwap", "select-swap":"Select\nSwap" }
 
 
-survival_path_dir = "./s2n-tls/tests/saw/work/fuzz/seeds"
+survival_path_dir = "/Users/ruji/Desktop/fuzz/s2n-tls/tests/saw/work/fuzz/seeds"
 
 
 
@@ -47,7 +47,7 @@ for i in range(len(seed_time)):
     cnt = cnt + 1
 
 df = pd.DataFrame(np_array, columns=["Time Stamp"])
-fig = sns.histplot(df, x="Time Stamp", cumulative=True, alpha=.4)
+fig = sns.histplot(df, x="Time Stamp", cumulative=True, kde = True,alpha=.4)
 sns.ecdfplot(df, x="Time Stamp")
 fig.set(xlabel='Time Stamp (second)', ylabel='Number of Seed')
 plt.savefig("seed_distribution.pdf")
