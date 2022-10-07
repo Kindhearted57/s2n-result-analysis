@@ -48,6 +48,6 @@ for i in range(len(seed_time)):
 
 df = pd.DataFrame(np_array, columns=["Time Stamp"])
 fig = sns.histplot(df, x="Time Stamp", cumulative=True, kde = True,alpha=.4)
-sns.ecdfplot(df, x="Time Stamp")
+
 fig.set(xlabel='Time Stamp (second)', ylabel='Number of Seed')
 plt.savefig("seed_distribution.pdf")
